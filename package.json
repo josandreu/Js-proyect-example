@@ -5,7 +5,9 @@
   "main": "js/index.js",
   "scripts": {
     "start": "babel-node src",
-    "test": "eslint src && flow && jest --coverage"
+    "test": "eslint src && flow && jest --coverage",
+    "pre-commit": "npm test",
+    "pre-push": "npm test"
   },
   "author": "Jos Andreu",
   "license": "MIT",
@@ -31,11 +33,5 @@
   "browserslist": [
     "> 1%"
   ],
-  "dependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
-    }
-  }
+  "dependencies": {}
 }
